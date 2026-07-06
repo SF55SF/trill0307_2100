@@ -11,23 +11,110 @@ const {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Бизнес центр Trilliant",
-  "url": "https://www.trilliant.uz/",
-  "image": "https://www.trilliant.uz/images/hero-bg.jpg",
-  "telephone": "+998505906059",
-  "email": "Sanjar.Saimatov@CMWP.uz",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "улица Шахрисабз, 2",
-    "addressLocality": "Ташкент",
-    "addressCountry": "UZ"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Ташкент"
-  },
-  "description": "Готовые офисы с ремонтом и мебелью в аренду в бизнес-центре Trilliant класса А в центре Ташкента."
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.trilliant.uz/#owner",
+      "name": "Бизнес центр Trilliant",
+      "alternateName": "Trilliant Business Center",
+      "url": "https://www.trilliant.uz/",
+      "logo": "https://www.trilliant.uz/favicon-192x192.png",
+      "image": "https://www.trilliant.uz/images/hero-bg.jpg",
+      "telephone": "+998505906059",
+      "email": "Sanjar.Saimatov@CMWP.uz",
+      "description": "Собственник офисных помещений в бизнес-центре Trilliant предлагает готовые офисы с ремонтом и мебелью в аренду в центре Ташкента.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "улица Шахрисабз, 2",
+        "addressLocality": "Ташкент",
+        "addressCountry": "UZ"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Ташкент"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Аренда офиса 1674 м² в бизнес-центре Trilliant",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+          "seller": {
+            "@id": "https://www.trilliant.uz/#owner"
+          },
+          "itemOffered": {
+            "@type": "Place",
+            "name": "Офисный блок 1674 м²",
+            "description": "Готовое офисное помещение с ремонтом и мебелью в аренду в бизнес-центре Trilliant.",
+            "floorSize": {
+              "@type": "QuantitativeValue",
+              "value": 1674,
+              "unitCode": "MTK",
+              "unitText": "м²"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Аренда офиса 223 м² в бизнес-центре Trilliant",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+          "seller": {
+            "@id": "https://www.trilliant.uz/#owner"
+          },
+          "itemOffered": {
+            "@type": "Place",
+            "name": "Офисный блок 223 м²",
+            "description": "Готовое офисное помещение с ремонтом и мебелью в аренду в бизнес-центре Trilliant.",
+            "floorSize": {
+              "@type": "QuantitativeValue",
+              "value": 223,
+              "unitCode": "MTK",
+              "unitText": "м²"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Аренда офиса 128 м² в бизнес-центре Trilliant",
+          "availability": "https://schema.org/InStock",
+          "businessFunction": "http://purl.org/goodrelations/v1#LeaseOut",
+          "seller": {
+            "@id": "https://www.trilliant.uz/#owner"
+          },
+          "itemOffered": {
+            "@type": "Place",
+            "name": "Офисный блок 128 м²",
+            "description": "Готовое офисное помещение с ремонтом и мебелью в аренду в бизнес-центре Trilliant.",
+            "floorSize": {
+              "@type": "QuantitativeValue",
+              "value": 128,
+              "unitCode": "MTK",
+              "unitText": "м²"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "@id": "https://www.trilliant.uz/#building",
+      "name": "Бизнес центр Trilliant",
+      "url": "https://www.trilliant.uz/",
+      "image": "https://www.trilliant.uz/images/hero-bg.jpg",
+      "description": "Бизнес-центр Trilliant класса А на улице Шахрисабз, 2 в Ташкенте. Доступны готовые офисные помещения в аренду от собственника.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "улица Шахрисабз, 2",
+        "addressLocality": "Ташкент",
+        "addressCountry": "UZ"
+      },
+      "containedInPlace": {
+        "@type": "City",
+        "name": "Ташкент"
+      }
+    }
+  ]
 };
 ---
 
